@@ -4,6 +4,7 @@ import io
 import time
 import zipfile
 import os
+import shutil
 from datetime import datetime
 
 # Fonction pour signer l'image
@@ -89,4 +90,4 @@ if uploaded_files:
     for img_path in signed_images:
         os.remove(img_path)
     os.remove(zip_filename)
-    os.rmdir(temp_dir)
+    shutil.rmtree(temp_dir)
